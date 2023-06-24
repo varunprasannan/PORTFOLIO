@@ -9,7 +9,16 @@ st.set_page_config(
         'About': "This webpage is my personal online Portfolio!"
     }
 )
-st.title('Varun Prasannan')
+
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
+
+st.info("🛠️ This page is still under development")
+st.title('🙋🏻‍♂️ Varun Prasannan')
 
 with open("VarunPrasannan.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
@@ -20,27 +29,52 @@ st.download_button(label="Download Resume",
                     mime='application/octet-stream')
 
 st.markdown("***")
-icon_size = 20
-st.sidebar.image("Varun.jpeg")
-st.sidebar.title("Contact Info")
-st.sidebar.button('linkedin', 'https://www.linkedin.com/in/varunprasannan/', 'Follow me on LinkedIn', icon_size)
-st.sidebar.button('github', 'https://github.com/varunprasannan/', 'Check out my Github profile', icon_size)
 
-# with st.sidebar:
-#     st.header("Contact Info")
-#     st.button("[Github](https://github.com/varunprasannan)")
-#     st.button("[LinkedIn](https://github.com/varunprasannan)")
+
+
+# ----------------
+def redirect_button(url: str, text: str= None, color="#2076e6"):
+    st.markdown(
+    f"""
+    <a href="{url}" target="_blank">
+        <div style="
+            display: inline-block;
+            padding: 0.5em 1em;
+            color: #FFFFFF;
+            background-color: {color};
+            border-radius: 3px;
+            text-decoration: none;">
+            {text}
+        </div>
+    </a>
+    """,
+    unsafe_allow_html=True
+    )
+
+# ----------------
+with st.sidebar:
+    st.sidebar.image("Varun.jpeg")
+    st.sidebar.title("Contact Info")
+    redirect_button("mailto:vprasannan4@gmail.com","EMail")
+    st.text(" ")
+    redirect_button("https://github.com/varunprasannan","Github")
+    st.text(" ")
+    redirect_button("https://www.linkedin.com/in/varunprasannan/","LinkedIn")
+
 
 with st.container():
     st.title("📚 Education")
+    st.text(" ")
     st.markdown(":blue[B. Engg] in :blue[Information Technology] from **:blue[Pimpri Chinchwad College of Engineering]**")
     st.markdown(":blue[HSC State Board] from **:blue[C.M.S English Medium High School]**")
     st.markdown(":blue[SSC State Board] from **:blue[C.M.S English Medium High School]**")
 st.markdown("***")
 
+
 # WORK EXPERIENCE
 with st.container():
-    st.title("🧑🏻‍💻 Work Experience")
+    st.title("👔 Work Experience")
+    st.text(" ")
     with st.expander('AFour Technologies Pvt. Ltd.'):
         st.write("• Created various Flask apps using Python")
         st.write("• Understood REST api concepts and development")       
@@ -56,9 +90,11 @@ with st.container():
         st.write("• Received a Letter of Recommendation for the same")
 st.markdown("***")
 
+
 # KEY PROJECTS
 with st.container():
     st.title("🎨 Projects")
+    st.text(" ")
     with st.expander('Gaming For the Specially Abled'):
         st.write("• Led a team of three and developed a game controlling mechanism with Python and OpenCV, helping the physically challenged to play games with ease.")
         st.write("• Available at this [link](https://github.com/varunprasannan/visionetic)")
@@ -68,33 +104,48 @@ with st.container():
         st.write("• Available at this [link](https://github.com/varunprasannan/attendancemanager)")
 st.markdown("***")
 
-with st.container():
-    st.title("Technical Skills")
-    c1, c2, c3 = st.columns(3)
-    with c1:
-        st.subheader("Languages")
-        st.write('Python')
-        st.write('SQL')
-        st.write('C++')
-        st.write('Java')
-        st.write('HTML')
-        st.write('CSS')
-        #st.write('Dart')
-    with c2:
-        st.subheader("Skills")
-        st.write('Git')
-        st.write('Linux')
-        st.write('POSIX')
-        st.write('Snowflake')
-        st.write('Docker')
-        st.write('MongoDB')
-    with c3:
-        st.subheader("Frameworks")
-        st.write('Streamlit')
-        st.write('Flask (REST)')
-        st.write('Django')
-        st.write('OpenCV')
-st.markdown("***")
 
+# Technical Skills
+with st.container():
+    st.title("🧑🏻‍💻 Technical Skills")
+    st.text(" ")
+#     c1, c2, c3 = st.columns(3)
+#     with c1:
+#         st.subheader("Languages")
+#         st.write('Python')
+#         st.write('SQL')
+#         st.write('C++')
+#         st.write('Java')
+#         st.write('HTML')
+#         st.write('CSS')
+#         #st.write('Dart')
+#     with c2:
+#         st.subheader("Skills")
+#         st.write('Git')
+#         st.write('Linux')
+#         st.write('POSIX')
+#         st.write('Snowflake')
+#         st.write('Docker')
+#         st.write('MongoDB')
+#     with c3:
+#         st.subheader("Frameworks")
+#         st.write('Streamlit')
+#         st.write('Flask (REST)')
+#         st.write('Django')
+#         st.write('OpenCV')
+# st.markdown("***")
+    st.subheader("Languages")
+    st.text("Python, C++, Java, SQL, HTML, CSS,  JavaScript, Dart")
+    st.text(" ")
+    st.text(" ")
+    st.subheader("Skills")
+    st.text("Git, Snowflake, Linux, Docker, MongoDB, Flutter, Verbal and Written communication skills, Clean Code Practices")
+    st.text(" ")
+    st.text(" ")
+    st.subheader("Frameworks")
+    st.text("Flask(REST), Django, Streamlit, React.js, Node.js")
+    st.text(" ")
+    st.markdown("***")
+    
 
 # Tabs for projects mayb?
