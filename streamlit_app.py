@@ -1,6 +1,4 @@
 import streamlit as st
-from st_functions import st_button, load_css
-load_css()
 
 st.set_page_config(
     page_title="Varun Prasannan",
@@ -25,8 +23,8 @@ st.markdown("***")
 icon_size = 20
 st.sidebar.image("Varun.jpeg")
 st.sidebar.title("Contact Info")
-st_button('linkedin', 'https://www.linkedin.com/in/varunprasannan/', 'Follow me on LinkedIn', icon_size)
-st_button('github', 'https://github.com/varunprasannan/', 'Check out my Github profile', icon_size)
+st.button('linkedin', 'https://www.linkedin.com/in/varunprasannan/', 'Follow me on LinkedIn', icon_size)
+st.button('github', 'https://github.com/varunprasannan/', 'Check out my Github profile', icon_size)
 
 # with st.sidebar:
 #     st.header("Contact Info")
