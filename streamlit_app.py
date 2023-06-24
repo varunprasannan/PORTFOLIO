@@ -146,6 +146,16 @@ with st.container():
     st.text("Flask(REST), Django, Streamlit, React.js, Node.js")
     st.text(" ")
     st.markdown("***")
+
+with st.container():
+    st.title("📄 Research Papers")
+    st.text(" ")
+    with st.expander('Smart Computer Commands using Gesture Recognition - PCCDA 2023'):
+        st.write("Paper available [here](https://link.springer.com/chapter/10.1007/978-981-19-6088-8_44)")
+    
+    with st.expander('Gesture Recognition and conversion to speech for Specially Abled - ICMISC 2022'):
+        st.write("Paper available [here](https://link.springer.com/chapter/10.1007/978-981-19-6088-8_44)")
+st.markdown("***")
     
 
 # Tabs for projects mayb?
