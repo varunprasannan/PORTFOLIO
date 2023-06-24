@@ -23,8 +23,8 @@ st.markdown("***")
 icon_size = 20
 st.sidebar.image("Varun.jpeg")
 st.sidebar.title("Contact Info")
-st.button('linkedin', 'https://www.linkedin.com/in/varunprasannan/', 'Follow me on LinkedIn', icon_size)
-st.button('github', 'https://github.com/varunprasannan/', 'Check out my Github profile', icon_size)
+st.sidebar.button('linkedin', 'https://www.linkedin.com/in/varunprasannan/', 'Follow me on LinkedIn', icon_size)
+st.sidebar.button('github', 'https://github.com/varunprasannan/', 'Check out my Github profile', icon_size)
 
 # with st.sidebar:
 #     st.header("Contact Info")
