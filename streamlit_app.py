@@ -30,8 +30,6 @@ st.download_button(label="Download Resume",
 
 st.markdown("***")
 
-
-
 # ----------------
 def redirect_button(url: str, text: str= None, color="#2076e6"):
     st.markdown(
@@ -39,7 +37,7 @@ def redirect_button(url: str, text: str= None, color="#2076e6"):
     <a href="{url}" target="_blank">
         <div style="
             display: inline-block;
-            padding: 0.5em 1em;
+            padding: 0.5em 7em;
             color: #FFFFFF;
             background-color: {color};
             border-radius: 3px;
@@ -109,33 +107,8 @@ st.markdown("***")
 with st.container():
     st.title("🧑🏻‍💻 Technical Skills")
     st.text(" ")
-#     c1, c2, c3 = st.columns(3)
-#     with c1:
-#         st.subheader("Languages")
-#         st.write('Python')
-#         st.write('SQL')
-#         st.write('C++')
-#         st.write('Java')
-#         st.write('HTML')
-#         st.write('CSS')
-#         #st.write('Dart')
-#     with c2:
-#         st.subheader("Skills")
-#         st.write('Git')
-#         st.write('Linux')
-#         st.write('POSIX')
-#         st.write('Snowflake')
-#         st.write('Docker')
-#         st.write('MongoDB')
-#     with c3:
-#         st.subheader("Frameworks")
-#         st.write('Streamlit')
-#         st.write('Flask (REST)')
-#         st.write('Django')
-#         st.write('OpenCV')
-# st.markdown("***")
     st.subheader("Languages")
-    st.text("Python, C++, Java, SQL, HTML, CSS,  JavaScript, Dart")
+    st.text("Python, C++, Java, SQL, HTML, CSS,  JavaScript ES6, Dart")
     st.text(" ")
     st.text(" ")
     st.subheader("Skills")
@@ -143,10 +116,11 @@ with st.container():
     st.text(" ")
     st.text(" ")
     st.subheader("Frameworks")
-    st.text("Flask(REST), Django, Streamlit, React.js, Node.js")
+    st.text("Flask(REST), React, Django, Streamlit, React.js, Node.js")
     st.text(" ")
     st.markdown("***")
 
+# Research Papers
 with st.container():
     st.title("📄 Research Papers")
     st.text(" ")
