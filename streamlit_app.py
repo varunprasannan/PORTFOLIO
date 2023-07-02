@@ -116,7 +116,7 @@ with st.container():
     st.text(" ")
     st.text(" ")
     st.subheader("Frameworks")
-    st.text("Flask(REST), React, Django, Streamlit, React.js, Node.js")
+    st.text("Flask(REST), Django, Streamlit, React.js, Node.js")
     st.text(" ")
     st.markdown("***")
 
