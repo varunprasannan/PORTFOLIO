@@ -17,7 +17,6 @@ hide_menu_style = """
         """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
 
-st.info("🛠️ This page is still under development")
 st.title('🙋🏻‍♂️ Varun Prasannan')
 
 with open("VarunPrasannan.pdf", "rb") as pdf_file:
@@ -53,17 +52,15 @@ def redirect_button(url: str, text: str= None, color="#2076e6"):
 with st.sidebar:
     st.sidebar.image("Varun.jpeg")
     st.sidebar.title("Contact Info")
-    redirect_button("mailto:vprasannan4@gmail.com","EMail")
-    st.text(" ")
-    redirect_button("https://github.com/varunprasannan","Github")
-    st.text(" ")
-    redirect_button("https://www.linkedin.com/in/varunprasannan/","LinkedIn")
+    st.link_button('Email','mailto:vprasannan4@gmail.com', use_container_width=True)
+    st.link_button('Github','https://github.com/varunprasannan', use_container_width=True)
+    st.link_button('LinkedIn','https://www.linkedin.com/in/varunprasannan/', use_container_width=True)
 
 
 with st.container():
     st.title("📚 Education")
     st.text(" ")
-    st.markdown(":blue[B. Engg] in :blue[Information Technology] from **:blue[Pimpri Chinchwad College of Engineering]**")
+    st.markdown(":blue[Bachelor of Engineering] in :blue[Information Technology] from **:blue[Pimpri Chinchwad College of Engineering]**")
     st.markdown(":blue[HSC State Board] from **:blue[C.M.S English Medium High School]**")
     st.markdown(":blue[SSC State Board] from **:blue[C.M.S English Medium High School]**")
 st.markdown("***")
@@ -93,6 +90,16 @@ st.markdown("***")
 with st.container():
     st.title("🎨 Projects")
     st.text(" ")
+
+    with st.expander('AFrosty - An AI Chatbot for your databases'):
+        st.write("Developed a chatbot which can answer questions based on a particular database by automatically extracting metadata from the database such as table names, number of columns, etc. This project will help novice developers to generate sql queries just by using natural language and will also fire the generated query and generate results in the user interface.")
+
+    with st.expander('Snowflake Accelerator'):
+        st.write("Developed a Streamlit project that is a powerful tool designed to seamlessly connect with your Snowflake account, offering valuable insights and visualizations on credit usage and related metrics. With its user-friendly interface, it empowers users to efficiently monitor and optimize resource consumption, enhancing overall data management and decision-making within the Snowflake data platform.")
+
+    with st.expander('Snowflake - Google Sheets Connector'):
+        st.write("Developed a Streamlit application which will push data from your personal google sheet file into your Snowflake database at regular intervals defined by the user. This project will secure the data in your Google Sheet files by backing up into the Snowflake Data Warehouse")
+
     with st.expander('Gaming For the Specially Abled'):
         st.write("• Led a team of three and developed a game controlling mechanism with Python and OpenCV, helping the physically challenged to play games with ease.")
         st.write("• Available at this [link](https://github.com/varunprasannan/visionetic)")
@@ -100,6 +107,7 @@ with st.container():
     with st.expander('Attendance Manager'):
         st.write("• Built an attendance manager using Python and Django for online video conferencing sites (Google Meet and UpGrad) which can keep a record of the students present in the meeting and even has proxy detection for false presentee.")
         st.write("• Available at this [link](https://github.com/varunprasannan/attendancemanager)")
+
 st.markdown("***")
 
 
@@ -122,7 +130,7 @@ with st.container():
 
 # Research Papers
 with st.container():
-    st.title("📄 Research Papers")
+    st.title("🔬 Research Papers")
     st.text(" ")
     with st.expander('Smart Computer Commands using Gesture Recognition - PCCDA 2023'):
         st.write("Paper available [here](https://link.springer.com/chapter/10.1007/978-981-19-6088-8_44)")
@@ -133,3 +141,11 @@ st.markdown("***")
     
 
 # Tabs for projects mayb?
+with st.container():
+    st.title("📄 Certifications")
+    st.text(" ")
+    st.text("Responsive Web Design - freecodecamp")
+    st.text("Snowflake Essentials - Data Warehousing, Data Applications, Data Sharing, Data Engineering, Data Lake")
+    st.text("Python: Coursera - University Of Michigan")
+    st.text("IIT Spoken Tutorial - C Programming, Git Training")
+st.markdown("***")
